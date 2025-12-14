@@ -1,0 +1,174 @@
+/* ---------- Global ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+
+  /* Sweet pastel background */
+  background: linear-gradient(
+    135deg,
+    #ffe4e1,  /* strawberry */
+    #fff1c1,  /* vanilla */
+    #e0f7fa,  /* mint */
+    #f3e5f5   /* lavender */
+  );
+  background-attachment: fixed;
+}
+
+/* ---------- App Container ---------- */
+.app-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+  text-align: center;
+  color: #5d4037;
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-bottom: 12px;
+  color: #6d4c41;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------- Add Sweet Form ---------- */
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  flex: 1;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ce93d8;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button.add {
+  background: linear-gradient(135deg, #ba68c8, #8e24aa);
+  color: white;
+}
+
+button.sell {
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+  color: white;
+}
+
+button.delete {
+  background: linear-gradient(135deg, #ef5350, #e53935);
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Table ---------- */
+/* ---------- Table Styling ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #ffffff;
+}
+
+th {
+  background-color: #ffe0b2;
+  color: #5d4037;
+  padding: 12px;
+  font-weight: 700;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+
+  /* ✅ FIX: make text visible */
+  color: #3e2723;   /* dark brown */
+  font-weight: 500;
+}
+
+/* Highlight sweet name */
+td.sweet-name {
+  font-weight: 700;
+  color: #4e342e;
+}
+
+/* Highlight quantity */
+td.sweet-quantity {
+  font-weight: 700;
+  color: #2e7d32;   /* green */
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+
+/* ---------- Quantity Badge ---------- */
+.badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.badge.green {
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+}
+
+.badge.red {
+  background: linear-gradient(135deg, #ff7043, #e64a19);
+}
+
+/* ---------- Footer / Empty State ---------- */
+.empty {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 13px;
+  }
+}
